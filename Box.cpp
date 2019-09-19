@@ -6,7 +6,7 @@ Box::Box(const sf::Vector2f& size, const sf::Vector2f& pos)
 	box.setOrigin({ float(size.x / 2.f), float(size.y / 2.f) });
 	box.setPosition(pos);
 
-	sf::Color default_c = sf::Color::Green;
+	sf::Color default_c = sf::Color::Transparent;
 	main_idle = default_c;
 	main_active = default_c;
 	outline_idle = default_c;
@@ -19,11 +19,6 @@ void Box::draw(sf::RenderWindow& w)
 {
 	w.draw(box);
 	w.draw(text);
-}
-
-void Box::update(float dt, sf::Event e)
-{
-	// It may be unused as for now, it will be deleted eventually
 }
 
 void Box::setMainIdleColor(const sf::Color& c)

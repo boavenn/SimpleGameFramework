@@ -5,8 +5,7 @@ class Box
 {
 public:
 	Box(const sf::Vector2f& size, const sf::Vector2f& pos);
-	virtual void draw(sf::RenderWindow& w);
-	virtual void update(float dt, sf::Event e);
+	void draw(sf::RenderWindow& w);
 
 	void setMainIdleColor(const sf::Color& c);
 	void setMainActiveColor(const sf::Color& c);
