@@ -1,5 +1,5 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include "StateManager.h"
 
 class Game
 {
@@ -12,5 +12,6 @@ private:
 	void draw();
 
 	sf::RenderWindow window;
+	StateManager state_manager;
 };
 

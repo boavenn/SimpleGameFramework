@@ -32,7 +32,7 @@ void Button::update(sf::RenderWindow& w)
 
 bool Button::isActive(sf::RenderWindow& w)
 {
-	sf::Vector2i mouse_pos = sf::Mouse::getPosition();
+	sf::Vector2i mouse_pos = sf::Mouse::getPosition(w);
 	return box.getGlobalBounds().contains({ float(mouse_pos.x), float(mouse_pos.y) });
 }
 

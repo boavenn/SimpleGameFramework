@@ -18,7 +18,7 @@ public:
 	Res& get(const std::string& name) { return resources.at(name); }
 
 private:
-	const std::string getPath(const std::string& name) { return dir + name + ext; }
+	const std::string getPath(const std::string& name) { return directory + name + extension; }
 
 	const std::string directory;
 	const std::string extension;
