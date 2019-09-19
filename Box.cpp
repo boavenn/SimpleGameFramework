@@ -102,7 +102,7 @@ void Box::updateTextColor(const sf::Color& c)
 void Box::updateTextSize()
 {
 	text.setCharacterSize(unsigned(box.getSize().y * 0.8f));
-	sf::FloatRect text_rect = text.getGlobalBounds();
+	sf::FloatRect text_rect = text.getLocalBounds();
 	text.setOrigin(text_rect.left + text_rect.width / 2.f, text_rect.top + text_rect.height / 2.f);
 	text.setPosition(box.getPosition());
 }
