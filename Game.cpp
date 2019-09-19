@@ -3,6 +3,7 @@
 Game::Game() : window(sf::VideoMode(800, 600, 32), "WINDOW TITLE")
 {
 	// Here the first state like MainMenu should be pushed to StateManager
+	// state_manager.pushState(std::make_unique<FirstState>(window, state_manager), 0, 1)
 }
 
 void Game::run()

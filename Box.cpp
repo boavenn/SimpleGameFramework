@@ -88,9 +88,10 @@ void Box::updateMainColor(const sf::Color& c)
 	box.setFillColor(c);
 }
 
-void Box::updateOutlineColor(const sf::Color& c)
+void Box::updateOutlineColor(const sf::Color& c, float thickness)
 {
 	box.setOutlineColor(c);
+	box.setOutlineThickness(thickness);
 }
 
 void Box::updateTextColor(const sf::Color& c)

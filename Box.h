@@ -22,7 +22,7 @@ public:
 
 protected:
 	void updateMainColor(const sf::Color& c);
-	void updateOutlineColor(const sf::Color& c);
+	void updateOutlineColor(const sf::Color& c, float thickness = 2.f);
 	void updateTextColor(const sf::Color& c);
 	void updateTextSize();
 
