@@ -10,6 +10,8 @@ public:
 	virtual void update(float dt, sf::Event e) = 0;
 	virtual void draw() = 0;
 	virtual void checkInput(float dt, sf::Event e) = 0;
+	void setPlace(unsigned idx);
+	bool& isConcurrent();
 
 protected:
 	bool isAbleToInput(float dt);

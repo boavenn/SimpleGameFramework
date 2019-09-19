@@ -1,5 +1,15 @@
 #include "State.h"
 
+void State::setPlace(unsigned idx)
+{
+	place_on_stack = idx;
+}
+
+bool& State::isConcurrent()
+{
+	return is_concurrent;
+}
+
 bool State::isAbleToInput(float dt)
 {
 	if (input_ability)
