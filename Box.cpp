@@ -21,6 +21,11 @@ void Box::draw(sf::RenderWindow& w)
 	w.draw(text);
 }
 
+void Box::updateAnimation(const std::string& str, float dt)
+{
+	box.setTextureRect(animation.at(str)->update(dt));
+}
+
 void Box::setMainIdleColor(const sf::Color& c)
 {
 	main_idle = c;
@@ -73,6 +78,16 @@ void Box::setTexture(const std::string& tex_name)
 	is_texture_set = true;
 }
 
+void Box::setTextureRect(const sf::IntRect& rect)
+{
+	box.setTextureRect(rect);
+}
+
+void Box::addAnimation(const std::string& name, float delay)
+{
+	animation.insert(std::make_pair(name, new Animation(delay)));
+}
+
 const sf::Vector2f& Box::getSize()
 {
 	return box.getSize();
@@ -81,6 +96,11 @@ const sf::Vector2f& Box::getSize()
 const sf::Vector2f& Box::getPosition()
 {
 	return box.getPosition();
+}
+
+Animation& Box::getAnimationOf(const std::string& str)
+{
+	return *animation.at(str);
 }
 
 void Box::updateMainColor(const sf::Color& c)

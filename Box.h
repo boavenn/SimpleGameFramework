@@ -1,11 +1,13 @@
 #pragma once
 #include "ResourceManager.h"
+#include "Animation.h"
 
 class Box
 {
 public:
 	Box(const sf::Vector2f& size, const sf::Vector2f& pos);
 	void draw(sf::RenderWindow& w);
+	void updateAnimation(const std::string& str, float dt);
 
 	void setMainIdleColor(const sf::Color& c);
 	void setMainActiveColor(const sf::Color& c);
@@ -16,9 +18,12 @@ public:
 	void setFont(const std::string& font_name);
 	void setText(const std::string& str, float spacing = 1.5f);
 	void setTexture(const std::string& tex_name);
+	void setTextureRect(const sf::IntRect& rect);
+	void addAnimation(const std::string& name, float delay);
 
 	const sf::Vector2f& getSize();
 	const sf::Vector2f& getPosition();
+	Animation& getAnimationOf(const std::string& str);
 
 protected:
 	void updateMainColor(const sf::Color& c);
@@ -32,6 +37,8 @@ protected:
 	sf::Color main_idle, main_active;
 	sf::Color outline_idle, outline_active;
 	sf::Color text_idle, text_active;
+	std::unordered_map<std::string, Animation*> animation;
 	bool is_texture_set = false;
+	bool is_animation_set = false;
 };
 
