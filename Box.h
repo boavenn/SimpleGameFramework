@@ -6,6 +6,8 @@ class Box
 {
 public:
 	Box(const sf::Vector2f& size, const sf::Vector2f& pos);
+	~Box();
+
 	void draw(sf::RenderWindow& w);
 	void updateAnimation(const std::string& str, float dt);
 

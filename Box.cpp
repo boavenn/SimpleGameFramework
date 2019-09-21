@@ -15,6 +15,12 @@ Box::Box(const sf::Vector2f& size, const sf::Vector2f& pos)
 	text_active = default_c;
 }
 
+Box::~Box()
+{
+	if (!animation.empty())
+		animation.clear();
+}
+
 void Box::draw(sf::RenderWindow& w)
 {
 	w.draw(box);
