@@ -10,6 +10,9 @@ public:
 	bool isActive(sf::RenderWindow& w);
 	bool isClicked(sf::RenderWindow& w);
 
+	void setToIdle();
+	void setToActive();
+
 protected:
 	bool was_active = false;
 };

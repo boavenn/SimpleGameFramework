@@ -55,3 +55,13 @@ const sf::IntRect& Animation::getFrameAt(unsigned idx)
 {
 	return frames[idx];
 }
+
+const sf::IntRect& Animation::getLastFrame()
+{
+	return frames.back();
+}
+
+const sf::IntRect& Animation::getFirstFrame()
+{
+	return frames.front();
+}

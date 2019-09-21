@@ -11,7 +11,10 @@ public:
 	void addFrame(const sf::IntRect& frame);
 	void resetAnimation();
 	bool isAnimationEnded();
+
 	const sf::IntRect& getFrameAt(unsigned idx);
+	const sf::IntRect& getLastFrame();
+	const sf::IntRect& getFirstFrame();
 
 private:
 	float delay;
