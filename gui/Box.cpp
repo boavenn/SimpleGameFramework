@@ -29,7 +29,8 @@ void Box::draw(sf::RenderWindow& w)
 
 void Box::updateAnimation(const std::string& str, float dt)
 {
-	box.setTextureRect(animation.at(str)->update(dt));
+	if(animation.at(str)->update(dt) != box.getTextureRect())
+		box.setTextureRect(animation.at(str)->update(dt));
 }
 
 void Box::setMainIdleColor(const sf::Color& c)
@@ -86,7 +87,8 @@ void Box::setTexture(const std::string& tex_name)
 
 void Box::setTextureRect(const sf::IntRect& rect)
 {
-	box.setTextureRect(rect);
+	if(box.getTextureRect() != rect)
+		box.setTextureRect(rect);
 }
 
 void Box::addAnimation(const std::string& name, float delay)
