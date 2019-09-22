@@ -1,4 +1,4 @@
-#include "InputButton.h"
+#include "InputButton.hpp"
 
 InputButton::InputButton(const sf::Vector2f& size, const sf::Vector2f& pos) : Button(size, pos)
 {

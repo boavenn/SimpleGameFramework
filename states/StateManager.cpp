@@ -1,4 +1,4 @@
-#include "StateManager.h"
+#include "StateManager.hpp"
 
 void StateManager::pushState(std::unique_ptr<State> new_state, bool is_swapping, bool is_first)
 {

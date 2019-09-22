@@ -1,6 +1,6 @@
 #pragma once
-#include "ResourceManager.h"
-#include "Animation.h"
+#include "../res/ResourceManager.hpp"
+#include "../util/Animation.hpp"
 
 class Box
 {

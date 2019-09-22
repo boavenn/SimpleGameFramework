@@ -1,4 +1,4 @@
-#include "Button.h"
+#include "Button.hpp"
 
 Button::Button(const sf::Vector2f& size, const sf::Vector2f& pos) : Box(size, pos)
 {

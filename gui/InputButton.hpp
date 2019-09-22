@@ -1,6 +1,6 @@
 #pragma once
-#include "Button.h"
-#include "Keyboard.h"
+#include "Button.hpp"
+#include "..//util/Keyboard.hpp"
 
 class InputButton : public Button
 {

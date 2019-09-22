@@ -1,4 +1,4 @@
-#include "Box.h"
+#include "Box.hpp"
 
 Box::Box(const sf::Vector2f& size, const sf::Vector2f& pos)
 {
