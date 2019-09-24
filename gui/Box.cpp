@@ -135,7 +135,7 @@ void Box::updateTextColor(const sf::Color& c)
 	text.setFillColor(c);
 }
 
-void Box::updateTextSize()
+void Box::centerText()
 {
 	text.setCharacterSize(unsigned(box.getSize().y * 0.8f));
 	sf::FloatRect text_rect = text.getLocalBounds();

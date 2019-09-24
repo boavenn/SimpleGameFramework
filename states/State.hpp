@@ -20,6 +20,7 @@ protected:
 	float transition_elapsed = 0.f;
 	bool input_ability = false;
 	bool is_concurrent = false;
+	bool should_pop = false;
 	unsigned place_on_stack = 0;
 	sf::RenderWindow& window;
 	StateManager& state_manager;
