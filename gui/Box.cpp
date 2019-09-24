@@ -68,7 +68,7 @@ void Box::setText(const std::string& str, float spacing)
 {
 	text.setString(str);
 	text.setLetterSpacing(spacing);
-	updateTextSize();
+	centerText();
 }
 
 void Box::setTexture(const std::string& tex_name)
@@ -86,6 +86,22 @@ void Box::setTextureRect(const sf::IntRect& rect)
 void Box::addAnimation(const std::string& name, float delay)
 {
 	animation.insert(std::make_pair(name, new Animation(delay)));
+}
+
+void Box::adjustTextToLeft(float offset)
+{
+	text.setCharacterSize(unsigned(box.getSize().y * 0.8f));
+	sf::FloatRect text_rect = text.getLocalBounds();
+	text.setOrigin(text_rect.left, text_rect.top + text_rect.height / 2.f);
+	text.setPosition({ box.getPosition().x - box.getSize().x / 2.f + offset, box.getPosition().y });
+}
+
+void Box::adjustTextToRight(float offset)
+{
+	text.setCharacterSize(unsigned(box.getSize().y * 0.8f));
+	sf::FloatRect text_rect = text.getLocalBounds();
+	text.setOrigin(text_rect.left + text_rect.width, text_rect.top + text_rect.height / 2.f);
+	text.setPosition({ box.getPosition().x + box.getSize().x / 2.f - offset, box.getPosition().y });
 }
 
 const sf::Vector2f& Box::getSize()

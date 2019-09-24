@@ -22,6 +22,9 @@ public:
 	void setTexture(const std::string& tex_name);
 	void setTextureRect(const sf::IntRect& rect);
 	void addAnimation(const std::string& name, float delay);
+	void centerText();
+	void adjustTextToLeft(float offset);
+	void adjustTextToRight(float offset);
 
 	const sf::Vector2f& getSize();
 	const sf::Vector2f& getPosition();
@@ -31,7 +34,6 @@ protected:
 	void updateMainColor(const sf::Color& c);
 	void updateOutlineColor(const sf::Color& c, float thickness = 2.f);
 	void updateTextColor(const sf::Color& c);
-	void updateTextSize();
 
 	sf::RectangleShape box;
 	sf::Font font;
