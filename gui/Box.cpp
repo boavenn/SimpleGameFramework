@@ -68,7 +68,6 @@ void Box::setText(const std::string& str, float spacing)
 {
 	text.setString(str);
 	text.setLetterSpacing(spacing);
-	centerText();
 }
 
 void Box::setTexture(const std::string& tex_name)
