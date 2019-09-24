@@ -5,14 +5,6 @@ Box::Box(const sf::Vector2f& size, const sf::Vector2f& pos)
 	box.setSize(size);
 	box.setOrigin({ float(size.x / 2.f), float(size.y / 2.f) });
 	box.setPosition(pos);
-
-	sf::Color default_c = sf::Color::Transparent;
-	main_idle = default_c;
-	main_active = default_c;
-	outline_idle = default_c;
-	outline_active = default_c;
-	text_idle = default_c;
-	text_active = default_c;
 }
 
 Box::~Box()
