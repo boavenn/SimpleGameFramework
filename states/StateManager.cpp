@@ -14,9 +14,11 @@ void StateManager::pushState(std::unique_ptr<State> new_state, bool is_swapping,
 		stack.back()->isConcurrent() = true;
 }
 
-void StateManager::popState()
+void StateManager::popState(unsigned quantity)
 {
-	stack.pop_back();
+	for (size_t i = 0; i < quantity; i++)
+		if (!stack.empty())
+			popState();
 }
 
 bool StateManager::isEmpty()

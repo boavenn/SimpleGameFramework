@@ -9,6 +9,7 @@ public:
 
 	bool& isInputActive();
 	void checkUserInput(float dt, sf::Event e);
+	const std::string& getInput();
 
 private:
 	std::string input = "";

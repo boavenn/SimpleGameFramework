@@ -31,6 +31,7 @@ void InputButton::checkUserInput(float dt, sf::Event e)
 				{
 					input.pop_back();
 					setText(input);
+					centerText();
 					keyboard.getKeyStatus(keyCode) = false;
 				}
 			}
@@ -40,9 +41,15 @@ void InputButton::checkUserInput(float dt, sf::Event e)
 				{
 					input.push_back(keyCode);
 					setText(input);
+					centerText();
 					keyboard.getKeyStatus(keyCode) = false;
 				}
 			}
 		}
 	}
+}
+
+const std::string& InputButton::getInput()
+{
+	return input;
 }

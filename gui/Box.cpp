@@ -5,6 +5,9 @@ Box::Box(const sf::Vector2f& size, const sf::Vector2f& pos)
 	box.setSize(size);
 	box.setOrigin({ float(size.x / 2.f), float(size.y / 2.f) });
 	box.setPosition(pos);
+
+	setOutlineActiveColor(sf::Color::Transparent);
+	setOutlineIdleColor(sf::Color::Transparent);
 }
 
 Box::~Box()
