@@ -1,5 +1,6 @@
 #pragma once
 #include "states/StateManager.hpp"
+#include "gui/Box.hpp"
 
 class Game
 {
@@ -13,5 +14,6 @@ private:
 
 	sf::RenderWindow window;
 	StateManager state_manager;
+	Box* fps;
 };
 
