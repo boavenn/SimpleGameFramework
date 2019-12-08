@@ -10,6 +10,7 @@ public:
 
 	void draw(sf::RenderWindow& w);
 	void updateAnimation(const std::string& str, float dt);
+	void move(sf::Vector2f velocity) { box.move(velocity); text.move(velocity); }
 
 	void setMainIdleColor(const sf::Color& c);
 	void setMainActiveColor(const sf::Color& c);
@@ -19,6 +20,8 @@ public:
 	void setTextActiveColor(const sf::Color& c);
 	void setFont(const std::string& font_name);
 	void setText(const std::string& str, float spacing = 1.5f);
+	void setTextOutlineColor(sf::Color c, float thickness = 1.f) { text.setOutlineColor(c); text.setOutlineThickness(thickness); }
+	void setTextScale(sf::Vector2f factors) { text.setScale(factors); }
 	void setTexture(const std::string& tex_name);
 	void setTextureRect(const sf::IntRect& rect);
 	void setPosition(sf::Vector2f pos) { box.setPosition(pos); centerText(); }
@@ -29,6 +32,7 @@ public:
 
 	const sf::Vector2f& getSize();
 	const sf::Vector2f& getPosition();
+	std::string getText() { return text.getString(); }
 	Animation& getAnimationOf(const std::string& str);
 
 protected:

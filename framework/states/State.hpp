@@ -11,6 +11,7 @@ public:
 	virtual void draw() = 0;
 	virtual void checkInput(float dt, sf::Event e) = 0;
 	void setPlace(unsigned idx);
+	void resetTransitionFreeze() { input_ability = false; }
 	bool& isConcurrent();
 
 protected:

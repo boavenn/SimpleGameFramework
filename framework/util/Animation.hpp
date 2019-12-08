@@ -4,8 +4,8 @@
 class Animation
 {
 public:
-	Animation(float delay);
-	
+	Animation(float delay, bool loop = true);
+
 	const sf::IntRect& update(float dt);
 
 	void addFrame(const sf::IntRect& frame);
@@ -19,6 +19,7 @@ public:
 private:
 	float delay;
 	float elapsed = 0.f;
+	bool loop;
 	bool animation_ended = false;
 	int current_frame_idx = -1;
 	sf::IntRect current_frame;

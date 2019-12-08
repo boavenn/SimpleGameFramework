@@ -4,7 +4,7 @@ Game::Game() : window(sf::VideoMode(800, 600, 32), "WINDOW TITLE")
 {
 	window.setFramerateLimit(60);
 	fps = new Box({ 10, 20 }, { 6, 10 });
-	/*fps->setFont("VCR_OSD_MONO_1.001");
+	/*fps->setFont("font");
 	fps->setText("0");
 	fps->setTextIdleColor(sf::Color::Green);*/
 
